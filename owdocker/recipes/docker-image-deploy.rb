@@ -1,6 +1,7 @@
 include_recipe 'deploy'
 include_recipe 'docker'
 
+Chef::Log.level = :debug
 Chef::Log.info("Entering docker-image-deploy")
 
 node[:deploy].each do |application, deploy|
